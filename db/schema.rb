@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_19_205357) do
+ActiveRecord::Schema.define(version: 2018_05_19_213428) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,26 @@ ActiveRecord::Schema.define(version: 2018_05_19_205357) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "idea_images", force: :cascade do |t|
+    t.bigint "idea_id"
+    t.bigint "image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["idea_id"], name: "index_idea_images_on_idea_id"
+    t.index ["image_id"], name: "index_idea_images_on_image_id"
+  end
+
+  create_table "ideas", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.bigint "category_id"
+    t.bigint "image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_ideas_on_category_id"
+    t.index ["image_id"], name: "index_ideas_on_image_id"
+  end
+
   create_table "images", force: :cascade do |t|
     t.string "name"
     t.string "url"
@@ -28,4 +48,7 @@ ActiveRecord::Schema.define(version: 2018_05_19_205357) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "idea_images", "ideas"
+  add_foreign_key "ideas", "categories"
+  add_foreign_key "ideas", "images"
 end
