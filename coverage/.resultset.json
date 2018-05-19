@@ -1,7 +1,18 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/app/models/category.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ]
     },
-    "timestamp": 1526761048
+    "timestamp": 1526762602
   }
 }
