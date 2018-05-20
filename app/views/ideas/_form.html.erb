@@ -6,5 +6,8 @@
   <%= f.label :description %>
   <%= f.text_field :description %>
 
+  <%= f.label :category %>
+  <%= select(:idea, :category_id, options_for_select(@categories.collect { |cat| [cat.name, cat.id] }))%>
+
   <%= f.submit %>
 <% end %>

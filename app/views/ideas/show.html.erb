@@ -1,5 +1,3 @@
-<h1><%= @ideas.title %></h1>
-<% @ideas.each do  |idea| %>
-  <p><%= idea.title %></p>
-  <p><%= idea.description %></p>
-<%end%>
+<h1><%= @idea.title %></h1>
+<h3><%= @idea.description %></h3>
+<p> <%= @idea.category.name %></p>
