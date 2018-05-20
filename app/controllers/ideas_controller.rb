@@ -1,5 +1,4 @@
 class IdeasController < ApplicationController
-
   def index
     @ideas = Idea.all
   end
@@ -8,16 +7,17 @@ class IdeasController < ApplicationController
     @idea = Idea.new
   end
 
-  def show
-    @idea = Idea.find(params[:id])
+  def create
+    idea = Idea.create(idea_params)
+    idea.save
+
+    redirect_to ideas_path
   end
 
-  def create
-    @idea = Idea.new(
-    title: params[:idea][:title],
-    description: params[:idea][:description])
-    @idea.save
-    redirect_to idea_path(@idea)
+  private
+
+  def idea_params
+    params.require(:idea).permit(:title, :description, :category_id, :image_ids => [])
   end
 
 end

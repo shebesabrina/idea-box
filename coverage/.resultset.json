@@ -6,27 +6,28 @@
         1,
         null
       ],
-      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/spec/features/idea/create_a_new_idea_spec.rb": [
+      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/spec/features/idea/user_can_create_a_new_idea_spec.rb": [
         1,
         null,
         1,
         1,
         null,
-        0,
+        1,
         null,
-        0,
+        1,
         null,
-        0,
-        0,
-        0,
+        1,
+        1,
         null,
-        0,
-        0,
+        1,
+        null,
+        1,
+        1,
         0,
         null,
         null
       ],
-      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/spec/features/idea/user_sees_all_ideas_spec.rb": [
+      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/spec/features/idea/user_can_see_all_ideas_spec.rb": [
         1,
         null,
         1,
@@ -36,7 +37,8 @@
         1,
         null,
         1,
-        null,
+        1,
+        1,
         null,
         null
       ],
@@ -135,29 +137,26 @@
       ],
       "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/app/controllers/ideas_controller.rb": [
         1,
+        1,
+        2,
+        null,
         null,
         1,
         1,
         null,
         null,
         1,
-        0,
-        null,
+        1,
+        1,
         null,
         1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
         null,
         null,
         1,
         null,
         1,
-        0,
+        1,
+        null,
         null,
         null
       ],
@@ -166,6 +165,6 @@
         null
       ]
     },
-    "timestamp": 1526779046
+    "timestamp": 1526844415
   }
 }
