@@ -14,6 +14,10 @@ class IdeasController < ApplicationController
     redirect_to ideas_path
   end
 
+  def edit
+
+  end
+
   private
 
   def idea_params
