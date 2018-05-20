@@ -14,7 +14,7 @@ class IdeasController < ApplicationController
 
   def create
     idea = Idea.create(idea_params)
-    binding.pry
+
     redirect_to idea_path(idea)
   end
 

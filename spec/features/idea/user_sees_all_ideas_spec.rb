@@ -7,6 +7,7 @@ describe 'user index page' do
     visit ideas_path
 
     expect(page).to have_content(idea.title)
-    # expect(page).to have_content(idea_2.title)
+    expect(page).to have_link('Edit')
+    expect(page).to have_link('Delete')
   end
 end

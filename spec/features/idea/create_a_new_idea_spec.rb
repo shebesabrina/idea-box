@@ -1,7 +1,7 @@
 require 'rails_helper'
 # An idea can be created by a user.
 describe 'user new page' do
-  xit 'should allow user to create an idea' do
+  it 'should allow user to create an idea' do
 
     visit new_idea_path
 
