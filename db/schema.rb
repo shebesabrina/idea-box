@@ -34,11 +34,9 @@ ActiveRecord::Schema.define(version: 2018_05_19_213428) do
     t.string "title"
     t.text "description"
     t.bigint "category_id"
-    t.bigint "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_ideas_on_category_id"
-    t.index ["image_id"], name: "index_ideas_on_image_id"
   end
 
   create_table "images", force: :cascade do |t|
@@ -49,6 +47,6 @@ ActiveRecord::Schema.define(version: 2018_05_19_213428) do
   end
 
   add_foreign_key "idea_images", "ideas"
+  add_foreign_key "idea_images", "images"
   add_foreign_key "ideas", "categories"
-  add_foreign_key "ideas", "images"
 end
