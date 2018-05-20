@@ -6,7 +6,6 @@ class IdeasController < ApplicationController
 
   def new
     @idea = Idea.new
-    binding.pry
   end
 
   def show
@@ -14,13 +13,11 @@ class IdeasController < ApplicationController
   end
 
   def create
-    idea = Idea.create(idea_params)
-    redirect_to idea_path(idea)
+    @idea = Idea.new(
+    title: params[:idea][:title],
+    description: params[:idea][:description])
+    @idea.save
+    redirect_to idea_path(@idea)
   end
 
-  private
-
-  def idea_params
-    params.require(:idea).permit(:title, :description)
-  end
 end

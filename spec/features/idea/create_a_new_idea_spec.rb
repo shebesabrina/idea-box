@@ -9,6 +9,7 @@ describe 'user new page' do
 
     fill_in 'idea[title]', with: 'New Title'
     fill_in 'idea[description]', with: 'New Description'
+    # save_and_open_page
     click_on 'Create Idea'
 
     expect(current_path).to eq(ideas_path)
