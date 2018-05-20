@@ -6,6 +6,36 @@
         1,
         null
       ],
+      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/spec/features/idea/idea_page_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/spec/models/category_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null
+      ],
       "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/app/models/category.rb": [
         1,
         1,
@@ -13,6 +43,22 @@
         null
       ],
       "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/spec/models/idea_image_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/app/models/idea_image.rb": [
+        1,
         1,
         1,
         null
@@ -68,13 +114,19 @@
         1,
         null
       ],
-      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/app/models/idea_image.rb": [
+      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/app/controllers/ideas_controller.rb": [
+        1,
+        null,
         1,
         1,
+        null,
+        null
+      ],
+      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/app/controllers/application_controller.rb": [
         1,
         null
       ]
     },
-    "timestamp": 1526768789
+    "timestamp": 1526774402
   }
 }

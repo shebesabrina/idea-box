@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :image do
     name 'Swiss Alps'
-    picture 'Matterhorn'
+    url 'Matterhorn'
   end
 end
