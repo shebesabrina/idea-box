@@ -6,6 +6,7 @@ class IdeasController < ApplicationController
 
   def new
     @idea = Idea.new
+    binding.pry
   end
 
   def show
@@ -14,7 +15,6 @@ class IdeasController < ApplicationController
 
   def create
     idea = Idea.create(idea_params)
-
     redirect_to idea_path(idea)
   end
 
