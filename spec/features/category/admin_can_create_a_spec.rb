@@ -8,7 +8,9 @@ describe 'admin category new page' do
 
     fill_in 'category[name]', with: 'New Category'
 
-    expect(current_path).to eq(category_path(category))
+    click_on 'Create Category'
+
+    expect(current_path).to eq(categories_path)
     expect(page).to have_content('New Category')
   end
 end
