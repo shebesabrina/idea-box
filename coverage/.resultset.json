@@ -90,9 +90,9 @@
         null,
         1,
         null,
-        null,
-        null,
         1,
+        null,
+        0,
         null,
         0,
         0,
@@ -197,6 +197,29 @@
         1,
         null
       ],
+      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/app/controllers/categories_controller.rb": [
         1,
         null,
@@ -285,8 +308,16 @@
         1,
         null,
         null
+      ],
+      "/Users/sabrinarobinson/Turing/2mod/projects/idea-box/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1526939245
+    "timestamp": 1526940152
   }
 }
