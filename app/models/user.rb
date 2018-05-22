@@ -9,4 +9,6 @@ class User < ApplicationRecord
     # if email and password correspond to a valid user, return that user
     # otherwise, return nil
   end
+
+  enum role:[:default, :admin]
 end

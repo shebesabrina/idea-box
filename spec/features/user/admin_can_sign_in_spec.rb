@@ -16,7 +16,7 @@ end
 
 context 'as default user' do
   it 'does not allow default user to see admin categories index' do
-    user = User.create(username: 'Justine', password: 'password123', role: 0)
+    user = create(:user)
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
