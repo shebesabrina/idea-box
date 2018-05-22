@@ -1,7 +1,6 @@
 
 <nav>
   <a href="<%= root_path %>">Home</a>
-  <a href="<%= current_user.ideas %>">Ideas</a>
 
   <% if current_user %>
     <%= link_to "Log out", logout_path %>

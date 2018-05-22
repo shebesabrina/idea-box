@@ -18,8 +18,8 @@ describe 'Visitor' do
 
       click_on 'Create User'
 
-      # expect(page).to have_content("Welcome, #{user.username}!")
       # save_and_open_page
+      # expect(page).to have_content("Welcome, #{user.username}!")
       expect(current_path).to eq(user_path(user))
     end
   end
@@ -36,6 +36,26 @@ describe 'Visitor' do
     click_on 'Log out'
 
     expect(current_path).to eq(root_path)
+  end
+end
+
+describe 'Visitor' do
+  it 'allows user to sign into their accout' do
+    user = create(:user)
+
+    visit '/'
+
+    click_on 'Log in'
+
+    expect(current_path).to eq(login_path)
+
+    fill_in 'user[email]', with: user.email
+    fill_in 'user[password]', with: user.password
+
+    click_on 'Log in'
+
+    expect(current_path).to eq(user_path(user))
+    expect(page).to have_content("Welcome, #{user.username}!")
   end
 end
 

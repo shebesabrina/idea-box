@@ -1,6 +1,10 @@
 class SessionsController <ApplicationController
   #logging in and logging out
 
+  def new
+
+  end
+
   def create
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
@@ -9,5 +13,10 @@ class SessionsController <ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_path
   end
 end
