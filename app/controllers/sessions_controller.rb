@@ -2,7 +2,6 @@ class SessionsController <ApplicationController
   #logging in and logging out
 
   def new
-
   end
 
   def create

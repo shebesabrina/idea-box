@@ -1,9 +1,4 @@
 class UsersController < ApplicationController
-
-  def show
-    @user = User.find(params[:id])
-  end
-
   def new
     @user = User.new
   end
@@ -14,9 +9,13 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
-      flash[:error] = 'Username and/or Password Invalid'
+      flash[:error] = 'Registration failed'
       render :new
     end
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   private
