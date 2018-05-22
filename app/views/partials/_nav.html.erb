@@ -1,0 +1,11 @@
+
+<nav>
+  <a href="<%= root_path %>">Home</a>
+
+  <% if current_user %>
+    <%= link_to "Log out", logout_path %>
+  <% else %>
+    <%= link_to "Register", new_user_path %>
+    <%= link_to "I already have an account", login_path %>
+  <% end %>
+</nav>
