@@ -1,7 +1,7 @@
 class Admin::CategoriesController < Admin::BaseController
 
   def index
-    @category = Category.all
+    @categories = Category.all
   end
 
   def new

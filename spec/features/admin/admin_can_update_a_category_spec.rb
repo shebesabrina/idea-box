@@ -6,7 +6,7 @@ describe 'Visitor' do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     category = create(:category, name: 'Art')
 
-    visit new_admin_category_path
+    visit edit_admin_category_path
 
     fill_in 'category[name]', with: category.name
 
