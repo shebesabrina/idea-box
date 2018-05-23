@@ -4,17 +4,22 @@ describe 'Visitor' do
   it 'admin can edit an existing category' do
     user = create(:user, role: 1)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-    category = create(:category, name: 'Art')
+    category_1 = create(:category, name: 'Art')
+    category_2 = create(:category, name: 'Technology')
 
-    visit edit_admin_category_path
+    visit categories_path
 
-    click_on 'Edit'
+    within("#category_#{category_1.id}") do
+      click_on 'Edit'
+    end
 
-    fill_in 'category[name]', with: category.name
+    expect(current_path).to eq(edit_admin_category_path(category_1))
+    save_and_open_page
+    fill_in 'category[name]', with: category_2.name
 
     click_on 'Update Category'
 
-    expect(current_path).to eq(admin_categories_path)
-    expect(page).to have_content('Art')
+    expect(current_path).to eq(categories_path)
+    expect(page).to have_content(category_2.name)
   end
 end

@@ -9,7 +9,7 @@ describe 'Visitor' do
       category_1 = create(:category, name: 'Art')
       category_2 = create(:category, name: 'Technology')
 
-      visit admin_categories_path
+      visit categories_path
 
       expect(page).to have_content(category_1)
       expect(page).to have_content(category_2)
