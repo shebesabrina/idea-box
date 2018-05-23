@@ -6,7 +6,7 @@ describe 'Visitor' do
 
       admin = create(:user, role: 1)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
-      image = create(:image, name: 'New Category')
+      image = create(:image, name: 'Mountains')
 
       visit images_path
 
@@ -19,8 +19,8 @@ describe 'Visitor' do
 
       click_on 'Create Image'
 
-      expect(current_path).to eq(admin_images_path)
-      expect(page).to have_content('New Image')
+      expect(current_path).to eq(images_path)
+      expect(page).to have_content('Mountains')
     end
   end
 end

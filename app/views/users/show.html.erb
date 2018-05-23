@@ -1,7 +1,9 @@
 
 <h1 id='welcome'>Welcome, <%= current_user.username %>!</h1>
-<%= link_to 'Create an idea', new_user_idea_path(current_user) %>
+
 <% if current_admin? %>
-<%= link_to 'Create an category', new_admin_category_path(current_user) %>
-<%= link_to 'Create an image', new_admin_image_path(current_user) %>
+<%= link_to 'Create a category', new_admin_category_path %>
+<%= link_to 'Create an image', new_admin_image_path %>
+<% else %>
+<%= link_to 'Create an idea', new_user_idea_path(current_user) %>
 <% end %>

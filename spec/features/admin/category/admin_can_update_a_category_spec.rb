@@ -18,7 +18,7 @@ describe 'Visitor' do
 
     click_on 'Update Category'
 
-    expect(current_path).to eq(categories_path)
+    expect(current_path).to eq(category_path(category_1))
     expect(page).to have_content(category_2.name)
   end
 end

@@ -7,8 +7,8 @@ class ImagesController < ApplicationController
     @image = Image.new
   end
 
-  def create
-    @image = Image.create(image_params)
-    redirect_to image_path
+  def show
+    @image = Image.find(params[:id])
   end
+
 end

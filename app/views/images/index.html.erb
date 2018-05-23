@@ -1,2 +1,17 @@
-<h1>Admin Images</h1>
- <%= link_to 'Create a new image', new_image_path %>
+
+ <h3>Check out those Images</h3>
+ <% if current_admin? %>
+ <%= link_to 'Create a new image', new_admin_image_path %>
+ <% end %>
+ <ul>
+   <% @images.each do |image| %>
+   <li id='image_<%= image.id %>'>
+     <%= link_to image.name, image_path(image) %>
+     <%= image.name %>
+     <% if current_admin? %>
+     <%= link_to "Edit", edit_admin_image_path(image) %>
+     <%= link_to "Delete", admin_image_path(image), method: "delete" %>
+     <% end %>
+   </li>
+   <% end %>
+ </ul>

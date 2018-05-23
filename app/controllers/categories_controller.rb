@@ -8,10 +8,7 @@ class CategoriesController < ApplicationController
     @category = Category.new
   end
 
-  def create
-    category = Category.create(idea_params)
-    category.save
-
-    redirect_to categories_path
+  def show
+    @category = Category.find(params[:id])
   end
 end
