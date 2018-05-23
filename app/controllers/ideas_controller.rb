@@ -16,11 +16,13 @@ class IdeasController < ApplicationController
   end
 
   def create
-    idea = Idea.create(idea_params)
+    @idea = current_user.ideas.new(idea_params)
 
-    idea.save
-
-    redirect_to ideas_path
+    if @idea.save
+      redirect_to user_idea_path(@user, @idea)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -36,7 +38,7 @@ class IdeasController < ApplicationController
   def destroy
     @idea.destroy
 
-    redirect_to ideas_path
+    redirect_to user_ideas_path(user)
   end
 
   private
@@ -46,7 +48,7 @@ class IdeasController < ApplicationController
   end
 
   def idea_params
-    params.require(:idea).permit(:title, :description, :category_id, :image_ids => [])
+    params.require(:idea).permit(:title, :description, :category_id, :user_id, :image_ids => [])
   end
 
 end
