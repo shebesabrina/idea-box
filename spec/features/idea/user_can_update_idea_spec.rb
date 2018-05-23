@@ -6,7 +6,7 @@ describe 'user edit page' do
     category = create(:category)
 
     visit edit_user_idea_path(idea.user, idea)
-# save_and_open_page
+
     fill_in 'idea[title]', with: 'Edit Title'
     fill_in 'idea[description]', with: 'Edit Description'
     select "#{category.name}", from: 'idea[category_id]'
