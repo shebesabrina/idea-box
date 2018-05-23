@@ -6,9 +6,9 @@ describe 'User visits category index page' do
       admin = create(:user, role: 1)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
-      visit categories_path
 
-      expect(page).to have_content('Admin Categories')
+      expect(admin.role).to eq('admin')
+      expect(admin.admin?).to be_truthy
     end
   end
 end
@@ -17,12 +17,10 @@ end
 context 'as default user' do
   it 'does not allow default user to see admin categories index' do
     user = create(:user)
-
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    visit categories_path
 
-    expect(page).to_not have_content('Admin Categories')
-    expect(page).to have_content('The page you were looking for doesn\'t exist')
+    expect(user.role).to eq('default')
+    expect(user.default?).to be_truthy
   end
 end

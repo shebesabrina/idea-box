@@ -4,6 +4,7 @@
 
   <% if current_user %>
     <%= link_to "Log out", logout_path %>
+    <%= link_to "Account", user_path(current_user) %>
   <% else %>
     <%= link_to "Register", new_user_path %>
     <%= link_to "I already have an account", login_path %>

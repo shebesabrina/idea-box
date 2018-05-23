@@ -14,7 +14,6 @@ describe 'Visitor' do
     end
 
     expect(current_path).to eq(edit_admin_category_path(category_1))
-    save_and_open_page
     fill_in 'category[name]', with: category_2.name
 
     click_on 'Update Category'
