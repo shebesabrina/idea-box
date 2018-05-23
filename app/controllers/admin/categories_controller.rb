@@ -19,6 +19,11 @@ class Admin::CategoriesController < Admin::BaseController
     @category = Category.find(params[:id])
   end
 
+  def destroy
+    @category = Category.find(params[:id])
+    @category.destroy
+  end
+
   private
 
   def idea_params
