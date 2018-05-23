@@ -12,6 +12,8 @@ describe 'Visitor' do
 
       expect(page).to have_link('Create a new category')
 
+      click_on 'Create a new category'
+
       fill_in 'category[name]', with: category.name
 
       click_on 'Create Category'

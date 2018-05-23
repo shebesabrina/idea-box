@@ -8,6 +8,8 @@ describe 'Visitor' do
 
     visit edit_admin_category_path
 
+    click_on 'Edit'
+
     fill_in 'category[name]', with: category.name
 
     click_on 'Update Category'

@@ -1,5 +1,5 @@
 class Admin::CategoriesController < Admin::BaseController
-
+  before_action :set_category, only:[:edit, :destroy]
   def index
     @categories = Category.all
   end
@@ -16,11 +16,9 @@ class Admin::CategoriesController < Admin::BaseController
   end
 
   def edit
-    @category = Category.find(params[:id])
   end
 
   def destroy
-    @category = Category.find(params[:id])
     @category.destroy
   end
 
@@ -28,5 +26,9 @@ class Admin::CategoriesController < Admin::BaseController
 
   def idea_params
     params.require(:category).permit(:name)
+  end
+
+  def set_category
+    @category = Category.find(params[:id])
   end
 end

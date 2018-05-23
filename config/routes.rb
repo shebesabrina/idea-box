@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   resources :categories
+  resources :images
 
   resources :users, only: [:new, :show, :create] do
     resources :ideas
@@ -13,5 +14,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :categories, only: [:new, :create, :index, :edit, :update, :destroy]
+    resources :images, only: [:new, :create, :index, :edit, :update, :destroy]
   end
 end
