@@ -14,10 +14,4 @@ class CategoriesController < ApplicationController
 
     redirect_to categories_path
   end
-
-  private
-
-  def idea_params
-    params.require(:category).permit(:name)
-  end
 end

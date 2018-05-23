@@ -14,4 +14,14 @@ class Admin::CategoriesController < Admin::BaseController
 
     redirect_to categories_path
   end
+
+  def edit
+    @category = Category.find(params[:id])
+  end
+
+  private
+
+  def idea_params
+    params.require(:category).permit(:name)
+  end
 end

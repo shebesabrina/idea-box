@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'Visitor' do
   context 'user that logs in as an admin' do
-    xit 'should allow admin to create a category' do
+    it 'should allow admin to create a category' do
 
       admin = create(:user, role: 1)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)

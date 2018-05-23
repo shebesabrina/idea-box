@@ -7,7 +7,7 @@ describe 'Visitor' do
     category_1 = create(:category, name: 'Art')
     category_2 = create(:category, name: 'Technology')
 
-    admin_categories_path(category_1.user)
+    admin_categories_path(category_1.admin)
 
     click_on 'Delete'
 
