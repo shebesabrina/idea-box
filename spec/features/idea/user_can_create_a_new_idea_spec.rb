@@ -13,7 +13,7 @@ describe 'user new page' do
     fill_in 'idea[title]', with: 'New Title'
     fill_in 'idea[description]', with: 'New Description'
     select "#{category.name}", from: 'idea[category_id]'
-    # save_and_open_page
+
     click_on 'Create Idea'
 
     expect(current_path).to eq(user_ideas_path(user))
