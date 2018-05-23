@@ -2,6 +2,19 @@ html {
   box-sizing: border-box;
 }
 
+#home {
+  background-image: url('home_page.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
+nav {
+  margin-top: 20px;
+  background-color: #3A778D
+}
+
 *,
 *:after,
 *:before {
@@ -17,6 +30,8 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  width: 100vw;
+  height: 100vh;
 }
 
 p, ol, ul, td {

@@ -10,6 +10,7 @@ end
 describe Idea, type: :model do
   describe 'relationship' do
     it { should belong_to(:category) }
+    it { should belong_to(:user) }
     it { should have_many(:idea_images) }
   end
 end
