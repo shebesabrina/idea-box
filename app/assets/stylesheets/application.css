@@ -2,6 +2,11 @@ html {
   box-sizing: border-box;
 }
 
+#home {
+  background-image: url('home_page.jpg');
+  background-size: cover;
+}
+
 *,
 *:after,
 *:before {

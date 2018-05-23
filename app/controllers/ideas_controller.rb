@@ -2,40 +2,43 @@ class IdeasController < ApplicationController
   before_action :set_idea, only: [:destroy, :edit, :update, :show]
 
   def index
-    @ideas = Idea.all
-
+    @user = User.find(params[:user_id])
+    @ideas = @user.ideas
   end
 
   def new
+    @user = User.find(params[:user_id])
     @idea = Idea.new
     @categories = Category.all
   end
 
   def show
-
+    @user = User.find(params[:user_id])
   end
 
   def create
-    @idea = current_user.ideas.new(idea_params)
-
+    @user = User.find(params[:user_id])
+    @idea = @user.ideas.new(idea_params)
     if @idea.save
-      redirect_to user_idea_path(@user, @idea)
+      redirect_to user_ideas_path(@user)
     else
       render :new
     end
   end
 
   def edit
+    @user = User.find(params[:user_id])
     @categories = Category.all
   end
 
   def update
     @idea.update(idea_params)
 
-    redirect_to idea_path(@idea)
+    redirect_to user_idea_path(@idea.user, @idea)
   end
 
   def destroy
+    user = User.find(params[:user_id])
     @idea.destroy
 
     redirect_to user_ideas_path(user)

@@ -5,7 +5,7 @@ describe 'user edit page' do
     idea = create(:idea)
     category = create(:category)
 
-    visit edit_user_idea_path(idea)
+    visit edit_user_idea_path(idea.user, idea)
 # save_and_open_page
     fill_in 'idea[title]', with: 'Edit Title'
     fill_in 'idea[description]', with: 'Edit Description'
@@ -13,7 +13,7 @@ describe 'user edit page' do
 
     click_on 'Update Idea'
 
-    expect(current_path).to eq(idea_path(idea))
+    expect(current_path).to eq(user_idea_path(idea.user, idea))
     expect(page).to have_content('Edit Title')
   end
 end

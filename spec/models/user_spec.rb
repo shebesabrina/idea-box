@@ -7,6 +7,9 @@ describe User, type: :model do
     it {should validate_presence_of(:username)}
     it {should validate_presence_of(:password)}
   end
+  context 'relationships' do
+    it { should have_many(:ideas) }
+  end
 end
 
 describe 'roles' do
