@@ -5,7 +5,7 @@ describe 'Visitor' do
     user = create(:user, role: 1)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     category_1 = create(:category, name: 'Art')
-    category_2 = create(:category, name: 'Art')
+    category_2 = create(:category, name: 'Technology')
 
     admin_categories_path(category_1.user)
 
