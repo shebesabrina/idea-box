@@ -8,7 +8,7 @@ describe 'Visitor' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
       image = create(:image, name: 'New Category')
 
-      visit admin_images_path
+      visit images_path
 
       expect(page).to have_link('Create a new image')
 
