@@ -9,5 +9,8 @@
   <%= f.label :category %>
   <%= select(:idea, :category_id, options_for_select(@categories.collect { |cat| [cat.name, cat.id] }))%>
 
+  <%= f.label :image %>
+  <%= select(:image, :image_id, options_for_select(@images.collect { |image| [image.name, image.id] }))%>
+
   <%= f.submit %>
 <% end %>

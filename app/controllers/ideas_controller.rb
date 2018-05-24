@@ -10,16 +10,20 @@ class IdeasController < ApplicationController
     @user = User.find(params[:user_id])
     @idea = Idea.new
     @categories = Category.all
+    @images = Image.all
   end
 
   def show
     @user = User.find(params[:user_id])
   end
 
+
   def create
     @user = User.find(params[:user_id])
     @idea = @user.ideas.new(idea_params)
-    if @idea.save
+    idea_image = @idea.idea_images.new(image_params)
+    if @idea.save && idea_image.save
+
       redirect_to user_ideas_path(@user)
     else
       @categories = Category.all
@@ -53,6 +57,10 @@ class IdeasController < ApplicationController
 
   def idea_params
     params.require(:idea).permit(:title, :description, :category_id, :user_id, :image_ids => [])
+  end
+
+  def image_params
+    params.require(:image).permit(:image_id)
   end
 
 end

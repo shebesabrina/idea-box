@@ -1,3 +1,7 @@
 <h1><%= @idea.title %></h1>
 <h3><%= @idea.description %></h3>
-<p> <%= @idea.category.name %></p>
+
+
+<p> <% @idea.idea_images.each do |idea_image| %></p>
+<%= image_tag(idea_image.image.url) %>
+<% end %>
