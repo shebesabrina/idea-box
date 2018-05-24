@@ -6,8 +6,8 @@
  <ul>
    <% @images.each do |image| %>
    <li id='image_<%= image.id %>'>
+     <%= image.url %>
      <%= link_to image.name, image_path(image) %>
-     <%= image.name %>
      <% if current_admin? %>
      <%= link_to "Edit", edit_admin_image_path(image) %>
      <%= link_to "Delete", admin_image_path(image), method: "delete" %>
