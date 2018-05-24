@@ -6,4 +6,5 @@
 <%= link_to 'Create an image', new_admin_image_path %>
 <% else %>
 <%= link_to 'Create an idea', new_user_idea_path(current_user) %>
+<%= link_to 'See all ideas', user_ideas_path(current_user) %>
 <% end %>
