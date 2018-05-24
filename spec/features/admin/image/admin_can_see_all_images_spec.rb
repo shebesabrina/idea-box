@@ -3,6 +3,7 @@ require 'rails_helper'
 describe 'Admin' do
   context 'visits index page' do
     it 'should display all images' do
+
       admin = create(:user, role: 1)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
       image_1 = create(:image, name: 'pie')

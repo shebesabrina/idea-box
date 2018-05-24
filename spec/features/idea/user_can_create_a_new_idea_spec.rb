@@ -5,6 +5,7 @@ describe 'user new page' do
     user = create(:user)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     category = create(:category)
+    image = create(:image)
 
     visit new_user_idea_path(user)
 
@@ -13,6 +14,7 @@ describe 'user new page' do
     fill_in 'idea[title]', with: 'New Title'
     fill_in 'idea[description]', with: 'New Description'
     select "#{category.name}", from: 'idea[category_id]'
+    select "#{image.name}", from: 'image[image_id]'
 
     click_on 'Create Idea'
 
