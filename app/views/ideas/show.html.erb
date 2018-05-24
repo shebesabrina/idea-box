@@ -2,6 +2,9 @@
 <h3><%= @idea.description %></h3>
 
 
+<div id=background >
 <p> <% @idea.idea_images.each do |idea_image| %></p>
 <%= image_tag(idea_image.image.url) %>
 <% end %>
+
+</div>

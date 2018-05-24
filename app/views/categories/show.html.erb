@@ -1,5 +1,7 @@
 <h1><%= @category.name %></h1>
+<div id=background >
 <% if current_admin? %>
 <%= link_to "Edit", edit_admin_category_path(@category) %>
 <%= link_to "Delete", admin_category_path(@category), method: "delete" %>
 <% end %>
+</div>

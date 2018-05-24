@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Visitor' do
+describe 'Admin' do
   context 'user that logs in as an admin' do
     it 'should allow admin to create a category' do
 

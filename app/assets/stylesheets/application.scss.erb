@@ -9,6 +9,12 @@ html {
   height: 100vh;
   color: white;
 }
+#background {
+  background-image: url(<%= asset_path('watercolour-texture.jpg') %>);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
 
 #welcome {
   padding: 20px;
@@ -18,6 +24,7 @@ html {
 }
 
 nav {
+
   padding: 20px;
   background-color: #3A778D;
   color: white;
@@ -29,6 +36,10 @@ nav {
    margin: 0;
    padding: 0;
    box-sizing: inherit;
+}
+
+h1, h2, h3 {
+  padding: 20px;
 }
 
 body {
@@ -55,9 +66,11 @@ pre {
 
 a:active {
     color: #E7CA64;
+
   }
 a:visited {
     color:black;
+
   }
 
 th {
@@ -69,9 +82,7 @@ td {
 }
 
 div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
+  padding: 20px;
 }
 
 #notice {

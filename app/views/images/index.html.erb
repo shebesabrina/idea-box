@@ -1,5 +1,6 @@
 
  <h3>Check out those images</h3>
+ <div id=background >
  <% if current_admin? %>
  <%= link_to 'Create a new image', new_admin_image_path %>
  <% end %>
@@ -15,3 +16,4 @@
    </li>
    <% end %>
  </ul>
+</div>

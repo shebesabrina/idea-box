@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Visitor' do
+describe 'Admin' do
   it 'admin can edit an existing category' do
     user = create(:user, role: 1)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
